@@ -48,11 +48,11 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = '192.168.1.100';
+$db['default']['hostname'] = '127.0.0.1';
 $db['default']['port'] = '1433';
 $db['default']['username'] = 'sa';
 $db['default']['password'] = 'ecobuild';
-$db['default']['database'] = 'travel_time';
+$db['default']['database'] = 'travel';
 $db['default']['dbdriver'] = 'sqlsrv';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = FALSE;
