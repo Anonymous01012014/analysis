@@ -135,8 +135,8 @@ class Views_model extends CI_Model{
 											 dbo.passing AS pass_to ON dbo.travel.passing_to = pass_to.id INNER JOIN
 											 dbo.station AS [to] ON pass_to.station_id = [to].id AND dbo.highway.id = [to].highway_id AND [from].highway_id = [to].highway_id INNER JOIN
 											 dbo.neighbor ON [from].id = dbo.neighbor.station_id AND [to].id = dbo.neighbor.neighbor_id
-					WHERE        (dbo.travel.is_valid = 1) AND (dbo.travel.is_valid = 1) AND ( pass_from.passing_time >= '2014-06-27 ".$startHours.":".$initialTimeShift.":24.000' AND pass_from.passing_time <= '2014-06-27 ".$endHours.":".$endTimeShift.":24.000') AND [from].station_id like '".$station."'
-					ORDER BY pass_from.passing_time";
+					WHERE        (dbo.travel.is_valid = 1) AND (dbo.travel.is_valid = 1) AND ( pass_from.passing_time >= '2014-06-27 ".$startHours.":".$initialTimeShift.":24.000' AND pass_to.passing_time <= '2014-06-27 ".$endHours.":".$endTimeShift.":24.000') AND [from].station_id like '".$station."'
+					ORDER BY dbo.travel.id";
 		$result = $this->db->query($query);
 		return $result->result_array();
 	 }
