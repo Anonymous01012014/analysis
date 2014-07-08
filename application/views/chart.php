@@ -30,8 +30,8 @@
 									for($j=0;$j<count($chartData[0]['data']) - 1;$j++){
 										echo (float)$chartData[0]['data'][$j].",";
 									}
-									echo (float)$chartData[0]['data'][count($chartData[0]['data']) - 1].",";
-									echo ']},';	
+									echo (float)$chartData[0]['data'][count($chartData[0]['data']) - 1];
+									echo ']}';	
 	                ?>
 	                ]
 	            },
@@ -67,14 +67,14 @@
 									for($j=0;$j<count($chartData[1]['data']) - 1;$j++){
 										echo (float)$chartData[1]['data'][$j].",";
 									}
-									echo (float)$chartData[1]['data'][count($chartData[1]['data']) - 1].",";
+									echo (float)$chartData[1]['data'][count($chartData[1]['data']) - 1];
 									echo ']},';	
 									echo "{name: '".$chartData[2]['name']."',";
 										 echo "  data: [";
 									for($j=0;$j<count($chartData[2]['data']) - 1;$j++){
 										echo (float)$chartData[2]['data'][$j].",";
 									}
-									echo (float)$chartData[2]['data'][count($chartData[2]['data']) - 1].",";
+									echo (float)$chartData[2]['data'][count($chartData[2]['data']) - 1];
 									echo ']}';	
 								
 						?>
